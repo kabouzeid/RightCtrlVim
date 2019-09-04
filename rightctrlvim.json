@@ -7,7 +7,7 @@
   "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/kabouzeid/RightCtrlVim/master/rightctrlvim.json",
   "rules": [
     {
-      "description": "Change caps_lock to right_control. (Post escape if pressed alone)",
+      "description": "Change caps_lock to right_control.",
       "manipulators": [
         {
           "from": {
@@ -21,11 +21,6 @@
           "to": [
             {
               "key_code": "right_control"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "escape"
             }
           ],
           "type": "basic"
@@ -105,7 +100,6 @@
       "description": "Change right_control+escape to caps_lock.",
       "manipulators": [
         {
-          "type": "basic",
           "from": {
             "key_code": "escape",
             "modifiers": {
@@ -121,7 +115,29 @@
             {
               "key_code": "caps_lock"
             }
-          ]
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Change right_control+semicolon to escape.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
         }
       ]
     }
